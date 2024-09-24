@@ -1,36 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// Import the Button component from the shadcn/ui library
+// https://ui.shadcn.com/docs/components/button
+// "Button" component is located in the local components/ui directory
+import { Button } from "@/components/ui/button"
+// Here is another example for Card
+// Import the Card component from the shadcn/ui library
+// https://ui.shadcn.com/docs/components/card
+// "Card" component is located in the local components/ui directory
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      <div className="flex space-x-4 mb-8">
-        <a href="https://vitejs.dev" target="_blank" className="hover:opacity-80">
-          <img src={viteLogo} className="h-24 w-24" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" className="hover:opacity-80">
-          <img src={reactLogo} className="h-24 w-24 animate-spin" alt="React logo" />
-        </a>
+    <>
+      {/* Render a Shadcn/ui Button component */}
+      {/* This button uses the default styling provided by shadcn/ui */}
+      <Button>Shadcn/ui Button</Button>
+
+      {/* Render a Shadcn/ui Card component */}
+      {/* This Card uses the default styling provided by shadcn/ui */}
+      <div className="p-20">
+        <Card>
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>Card Content</p>
+          </CardContent>
+          <CardFooter>
+            <p>Card Footer</p>
+          </CardFooter>
+        </Card>
       </div>
-      <h1 className="text-4xl font-bold mb-4 text-gray-800">Vite + React</h1>
-      <div className="bg-white p-8 rounded-lg shadow-md">
-        <button 
-          onClick={() => setCount((count) => count + 1)}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4"
-        >
-          count is {count}
-        </button>
-        <p className="text-gray-600">
-          Edit <code className="bg-gray-200 p-1 rounded">src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="mt-8 text-gray-500">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+
+    </>
   )
 }
 

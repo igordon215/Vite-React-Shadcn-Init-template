@@ -8,9 +8,13 @@ This is a Base Template I made for anyone looking to create a Vite+React project
 
 Shadecn is a really cool component library!!  
 checkout Shadcn here: https://ui.shadcn.com/
-## Enjoy!!
+## Check Out App.tsx
+The code in App.tsx has comments on how to add UI componets to your project
+all guides are on https://ui.shadcn.com/
+you can also ref youtube for tutorials
 
 Everything Below is just auto generated Readme stuff.
+
 ## ReadMe Generated Text
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
